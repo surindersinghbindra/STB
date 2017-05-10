@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:background="@drawable/selector_list"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/vod_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/ListText" />
+
+    <TextView
+        android:id="@+id/vod_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textAppearance="@style/ListText" />
+
+    <ImageView
+        android:id="@+id/vod_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</FrameLayout>

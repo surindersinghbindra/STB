@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="2dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:layout_width="292dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/top_image_description"
+            app:srcCompat="@drawable/menu_live_tv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background"
+                        android:padding="16dp"
+                        android:text="@string/live_list"
+                        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_overlay"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/all_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/selector_list"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:tag="all_channels">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_all" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="4dp"
+                                android:text="ALL"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/favorite_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/selector_list"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:tag="favorite_channels">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="4dp"
+                                android:text="Favorite"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lock_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/selector_list"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:tag="locked_channels">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_action_name" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="4dp"
+                                android:text="Lock Channels"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/categories_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background"
+                        android:nextFocusDown="@id/categories_rv"
+                        tools:listitem="@layout/item_category">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@color/background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="@string/channel_list"
+                        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/channels_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_channel"
+                        android:nextFocusRight="@+id/epg_rv"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:padding="1dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight=".55"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:id="@+id/channel_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            app:srcCompat="@mipmap/ic_tv" />
+
+                        <TextView
+                            android:id="@+id/channel_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/channel_icon"
+                            android:layout_marginStart="17dp"
+                            android:layout_toEndOf="@+id/channel_icon"
+                            android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+                        <TextView
+                            android:id="@+id/channel_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/channel_name"
+                            android:layout_below="@+id/channel_name" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true"
+                            android:background="@android:color/white" />
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/epg_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom|end"
+                        android:background="@color/background"
+                        tools:listitem="@layout/item_epg">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight=".45"
+                    android:background="@android:color/black">
+
+                    <net.henriqueof.stb.media.VideoPlayer
+                        android:id="@+id/videoplayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <!--
+                    <net.henriqueof.stb.widget.media.IjkVideoView
+                        android:id="@+id/video_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:focusable="false"/>
+                        -->
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/hud_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:background="#77000000"
+        android:padding="8dp"
+        android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</FrameLayout>

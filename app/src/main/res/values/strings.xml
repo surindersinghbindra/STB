@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StreamlineTV</string>
+
+    <string name="live_list">LIVE LIST</string>
+    <string name="channel_list">CHANNEL LIST</string>
+    <string name="top_image_description">Top image</string>
+    <string name="text_vod">VOD</string>
+    <string name="video_list">NEW RELEASES</string>
+</resources>

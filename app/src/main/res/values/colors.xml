@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="background">#40b3b3b3</color>
+    <color name="black_overlay">#50383838</color>
+
+    <color name="colorSelect">#f7921f</color>
+
+    <color name="colorServerActive">#38c871</color>
+    <color name="colorServerFocus">#9f68b36b</color>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\surin\Desktop\New folder\STB\STB\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="884bdd97034aa24771ffb0616714f7ed1b89b103">
+        <dex dex="C:\Users\surin\Desktop\New folder\STB\STB\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_01eafc5da1a104b1f9f5346cdadec30d6d651c25\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\surin\Desktop\New folder\STB\STB\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\surin\Desktop\New folder\STB\STB\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_9599739eeff5b24a53754220471d630363ffd5f2\classes.dex" />
+    </item>
+
+</items>
